@@ -1,0 +1,47 @@
+💡 Projeto: Contador de Pares – NeanderWin 🧮✨
+Este projetinho aqui é simples, direto e divertido: vamos contar quantos números pares existem em uma lista usando o lendário simulador NeanderWin! 😄🔧
+
+🎯 Objetivo
+Ler uma lista de números armazenados na memória e descobrir quantos deles são pares 🟰🟰
+(Spoiler: números que dividem certinho por 2! 😉)
+
+⚙️ Como funciona?
+🔢 O programa faz o seguinte:
+
+Começa lendo uma lista de números a partir do endereço 20 na memória.
+
+Vai lendo até encontrar o número -1, que significa "fim da lista" 🛑.
+
+Para cada número, verifica se ele é divisível por 2 (ou seja, se é par 🧠➗2).
+
+Cada vez que encontra um número par, ele soma +1 em um contador.
+
+No final, esse contador (armazenado no endereço 30) guarda o total de números pares encontrados! ✅
+
+🚀 Como executar
+Siga esses passos rapidinho e veja a mágica acontecer:
+
+Abra o NeanderWin 🖥️.
+
+Insira os números da lista nos endereços 20 a 23.
+
+Coloque o valor 2 no endereço 31 (usado para verificar se é par).
+
+Dê play no programa ▶️.
+
+🧪 Exemplo de dados
+📍 Endereço	🔢 Valor
+20	4
+21	7
+22	8
+23	-1
+31	2
+
+✨ Resultado esperado no endereço 30: 2 (porque 4 e 8 são pares!)
+
+💬 Observações finais
+Esse projeto é uma ótima forma de treinar lógica e conhecer melhor o funcionamento do NeanderWin.
+Além disso, ele mostra que até com instruções simples dá pra fazer coisas úteis — e até divertidas! 😄🧠
+
+Se quiser incrementar, tente fazer o programa somar os números pares em vez de só contá-los. Fica como desafio extra! 💪🎯
+
