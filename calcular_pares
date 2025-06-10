@@ -1,49 +1,55 @@
+
+; --------------------------------------------
+; Projeto: Contador de Pares
+; Objetivo: Contar quantos números pares existem
+; em uma lista armazenada na memória.
+;
+; A lista começa no endereço 20 e termina com -1.
+; O resultado (quantidade de números pares) será
+; armazenado no endereço 30.
+; --------------------------------------------
+
 ; Endereços usados:
-; 20–23: lista de números
-; 30: contador de pares
-; 31: valor 2 para comparação
+; 20–23: Lista de números
+; 30: Contador de pares (inicializado com 0)
+; 31: Constante 2 (para verificação de paridade)
+; 32: Ponteiro para a posição atual da lista
+; 33: Valor atual sendo analisado
 
 INICIO:
-    ; Inicializa contador de pares em 0
-    CARGI 0
+    CARGI 0       ; Zera o contador de pares
     ARMAZ 30
 
-    ; Endereço da lista
-    CARGI 20
-    ARMAZ 32       ; endereço auxiliar
+    CARGI 20      ; Endereço inicial da lista
+    ARMAZ 32
 
 LOOP:
-    ; Carrega o valor da lista
-    CARG 32
-    ARMAZ 33       ; endereço temporário
-    CARGI -1
-    SUB 33
+    CARG 32       ; Lê o valor apontado
+    ARMAZ 33
+
+    CARG 33
+    SUBI -1       ; Verifica se chegou ao final da lista
     DESVZ FIM
 
     CARG 33
-    DIV 31         ; número / 2
-    MULT 31        ; (n/2)*2
-    SUB 33
+    DIV 31        ; valor / 2
+    MULT 31       ; (valor / 2) * 2
+    SUB 33        ; Se o resultado for 0, é par
     DESVZ PAR
 
-    ; Se não for par
+    ; Próximo valor da lista (caso não seja par)
     CARG 32
-    CARGI 1
-    ADD
+    ADI 1
     ARMAZ 32
     DESV LOOP
 
 PAR:
-    ; Se for par, incrementa contador
-    CARG 30
-    CARGI 1
-    ADD
+    CARG 30       ; Soma +1 ao contador
+    ADI 1
     ARMAZ 30
 
-    ; Vai para o próximo
-    CARG 32
-    CARGI 1
-    ADD
+    CARG 32       ; Próximo valor da lista
+    ADI 1
     ARMAZ 32
     DESV LOOP
 
