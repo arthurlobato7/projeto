@@ -1,0 +1,33 @@
+# Projeto: Contador de Pares – NeanderWin
+
+Este projeto implementa um contador de números pares usando a linguagem de montagem do NeanderWin.
+
+## Objetivo
+
+Ler uma lista de números da memória e contar quantos deles são pares.
+
+## Como funciona
+
+- A lista de números está armazenada a partir do endereço 20.
+- O programa percorre a lista até encontrar `-1`.
+- Para cada número, verifica se ele é divisível por 2.
+- Um contador (em endereço 30) armazena a quantidade de pares encontrados.
+
+## Como executar
+
+1. Abra o NeanderWin.
+2. Insira os dados nos endereços 20 a 23.
+3. Insira o valor `2` no endereço 31.
+4. Execute o programa.
+
+## Exemplo de dados
+
+| Endereço | Valor |
+|----------|-------|
+| 20       | 4     |
+| 21       | 7     |
+| 22       | 8     |
+| 23       | -1    |
+| 31       | 2     |
+
+Resultado esperado no endereço 30: `2`
