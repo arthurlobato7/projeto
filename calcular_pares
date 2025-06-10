@@ -1,0 +1,51 @@
+; Endereços usados:
+; 20–23: lista de números
+; 30: contador de pares
+; 31: valor 2 para comparação
+
+INICIO:
+    ; Inicializa contador de pares em 0
+    CARGI 0
+    ARMAZ 30
+
+    ; Endereço da lista
+    CARGI 20
+    ARMAZ 32       ; endereço auxiliar
+
+LOOP:
+    ; Carrega o valor da lista
+    CARG 32
+    ARMAZ 33       ; endereço temporário
+    CARGI -1
+    SUB 33
+    DESVZ FIM
+
+    CARG 33
+    DIV 31         ; número / 2
+    MULT 31        ; (n/2)*2
+    SUB 33
+    DESVZ PAR
+
+    ; Se não for par
+    CARG 32
+    CARGI 1
+    ADD
+    ARMAZ 32
+    DESV LOOP
+
+PAR:
+    ; Se for par, incrementa contador
+    CARG 30
+    CARGI 1
+    ADD
+    ARMAZ 30
+
+    ; Vai para o próximo
+    CARG 32
+    CARGI 1
+    ADD
+    ARMAZ 32
+    DESV LOOP
+
+FIM:
+    FIM
